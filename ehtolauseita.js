@@ -46,7 +46,6 @@ function etsiSuurin()
     l3 = parseInt(document.getElementById('luku3').value);
     l4 = parseInt(document.getElementById('luku4').value);
     l5 = parseInt(document.getElementById('luku5').value);
-    alert(l1+l2+l3+l4+l5);
     if(l1 < l2 && l3 < l2 && l4 < l2 && l5 < l2)
     {
       suurin = l2;
@@ -100,7 +99,7 @@ function etsiSuurin()
   function kaanna()
   {
     var lang = document.getElementById('kieli').value;
-    if(lang == 'eng') 
+    if(lang == 'eng')
     {
       document.write("Hello world!");
     }
