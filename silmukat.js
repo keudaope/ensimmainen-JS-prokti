@@ -1,14 +1,16 @@
+// For-silmukka
 for(var i = 0; i < 10; i++)
 {
   console.log(i + '\n');
 }
-
+// While-silmukka
 var i = 0;
 while(i < 10)
 {
   console.log(i + '\n');
   i++;
 }
+//Do - while -silmukka
 var i = 0;
 do
 {
