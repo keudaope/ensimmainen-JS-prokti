@@ -129,10 +129,31 @@ function arvoKortit()
     }
   }
   var kortit = [];
+  var temp;
   for(l = 0; l < 5; l++)
   {
       temp = pakka[Math.floor(Math.random()*52)];
       kortit[l] = temp;
   }
   document.getElementById('pakka').innerHTML = '<p>'+kortit+'</p>';
+}
+function arvoLotto()
+{
+  var lnumerot = [];
+  var temp;
+  for(var lotto = 0; lotto < 7; lotto++)
+  {
+    temp = Math.floor(Math.random()*40)+1;
+    for(var kayLapi = 0; kayLapi < lnumerot.length; kayLapi++)
+    {
+      if(temp == lnumerot[kayLapi])
+      {
+        temp = Math.floor(Math.random()*40)+1;
+      }
+    }
+    lnumerot[lotto] = temp;
+  }
+  lnumerot.sort(function(a, b){return a-b});
+
+  document.getElementById('ltaulu').innerHTML = '<p>'+lnumerot+'</p>';
 }
