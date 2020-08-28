@@ -67,3 +67,102 @@ function hipHeijaa()
     document.getElementById('lukujenTulostus').innerHTML = tuloste;
   }
 }
+function ekatKymmenen()
+{
+  var kym = '<p>';
+  for(var e = 1; e <=10; e++)
+  {
+    kym += e + ' ';
+  }
+  kym += '</p>';
+  document.getElementById('lukujenTulostus10').innerHTML = kym;
+}
+function yhteen()
+{
+  yhteensa = 0;
+  for(var y = 1; y <=10; y++)
+  {
+    yhteensa += y;
+  }
+  document.getElementById('lukujenTulostusY').innerHTML = '<p>'+ yhteensa + '</p>';
+}
+function potenssi()
+{
+  var koro = document.getElementById('kor').value;
+  var pote = document.getElementById('pot').value;
+  yht = koro;
+  for(var p = 1; p < pote; p++)
+  {
+    yht *= koro;
+  }
+  document.getElementById('lukujenTulostusP').innerHTML = '<p>' + yht + '</p>';
+}
+function etsiSuurinPienin()
+{
+  var taulu = [], temp;
+  for(var x = 0; x < 5; x++)
+  {
+    temp = document.getElementById('taulukko['+x+']').value;
+    temp = parseInt(temp);
+    taulu.push(temp);
+    //alert(taulu);
+  }
+  taulu = taulu.sort((a,b) => a-b);
+  document.getElementById('lukujenTulostusT').innerHTML = '<p>Pienin luku: ' + taulu[0] + ' ja suurin luku: '+ taulu[taulu.length-1];
+}
+function muokkaaSalasana()
+{
+  var pw = '';
+  var eka, toka;
+  pw = document.getElementById('salis').value;
+  alert(pw);
+  var taulu = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j','k', 'l', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v', 'x', 'y', 'z', 'å', 'ä', 'ö', 'w'];
+  var temp = [];
+  var lop='';
+  for(var s = 0; s < pw.length; s++)
+  {
+    eka = pw[s];
+    //alert[pw];
+    //alert[eka];
+    temp.push(eka);
+    //alert(eka);
+    var lisa = Math.floor(Math.random()*taulu.length);
+    toka = taulu[lisa];
+    temp.push(toka);
+    //alert(toka);
+  }
+  lop = temp.join('');
+  document.getElementById('lukujenTulostusS').innerHTML = lop;
+}
+function llisettomat()
+{
+  var nro1, nro2, palku, ralku, psumma=0, rsumma=0, pluvut='', rluvut='';
+  nro1 = parseInt(document.getElementById('pnro').value);
+  nro2 = document.getElementById('inro').value;
+  if(nro1%2 == 0)
+  {
+    palku = nro1;
+  }
+  else {
+    palku = nro1+1;
+  }
+  for(var b = palku; b<=nro2; b+=2)
+  {
+    pluvut += b + ' ';
+    psumma += b;
+    //alert(pluvut + ' ' + psumma);
+  }
+  if(nro1%2 == 0)
+  {
+    ralku = nro1+1;
+  }
+  else {
+    ralku = nro1;
+  }
+  for(var r = ralku; r<=nro2; r+=2)
+  {
+    rluvut += r + ' ';
+    rsumma += r;
+  }
+  document.getElementById('lukujenTulostusPari').innerHTML = '<p>Parilliset numerot: ' + pluvut +' ja niiden summa: ' + psumma + '</p><p>Parittomat luvut: ' + rluvut + ' ja niiden summa: '+ rsumma + '</p>';
+}

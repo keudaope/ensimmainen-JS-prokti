@@ -1,25 +1,29 @@
 // For-silmukka
+/*var muuttuja = '';
 for(var i = 0; i < 10; i++)
 {
-  console.log(i + '\n');
+  muuttuja += i + ' ';
 }
+console.log(muuttuja);*/
 // While-silmukka
-var i = 0;
+/*var i = 0;
 while(i < 10)
 {
-  console.log(i + '\n');
+  console.log(i);
   i++;
-}
+}*/
 //Do - while -silmukka
-var i = 0;
+/*var i = 0;
+var muuttuja[1,2,3,4];
 do
 {
-  console.log(i + '\n');
-  i++;
+  //
 }while(i < 10);
-
-var lemmikki = 'hevonen';
-for(var j = (lemmikki.length-1); j >= 0; j--)
+console.log(muuttuja);*/
+var kertoma = 1;
+var annettuLuku = 4;
+for(var k = 0; k < annettuLuku; k++)
 {
-  console.log(lemmikki[j]);
+  kertoma *= (k+1);
 }
+console.log(kertoma);
