@@ -6,7 +6,7 @@ function jarjesta()
   luku3 = parseInt(document.getElementById('kolmas').value);
   document.write("Annoit luvut: " + luku1 + ' ' + luku2 + ' ' + luku3 + "<br>");
   if(luku1 < luku2 && luku1 < luku3)
-  {
+  {k
     if(luku2 < luku3)
     {
       document.write("Lukujen järjestys: " + luku1 + ' ' + luku2 + ' ' + luku3);
